@@ -6,7 +6,7 @@ require("dotenv").config();
 require("./database/connection");
 
 const corsOption = {
-    origin: ['http://localhost:3000'],
+    // origin: ['http://localhost:3000'],
      origin: process.env.REACT_URL,
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
