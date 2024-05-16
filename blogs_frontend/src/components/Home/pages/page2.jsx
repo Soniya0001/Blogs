@@ -10,7 +10,7 @@ const Page2 = () => {
         const fetch = async () => {
             try {
                 await axios
-                    .get("http://localhost:1000/api/v1/getRecentBlogs")
+                    .get("https://blogs-2-back.onrender.com/api/v1/getRecentBlogs")
                     .then((res) => setBlogs(res.data.data));
             } catch (error) {
                 alert("Some error occured")
