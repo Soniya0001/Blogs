@@ -8,7 +8,7 @@ const Blogs = () => {
     const [Blogs, setBlogs] = useState();
     useEffect(() => {
         const fetch = async () => {
-            await axios.get("http://localhost:1000/api/v1/getAll")
+            await axios.get("https://blogs-2-back.onrender.com/api/v1/getAll")
                 .then((res) => setBlogs(res.data.data));
         };
         fetch();
