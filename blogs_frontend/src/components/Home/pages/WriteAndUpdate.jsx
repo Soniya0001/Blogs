@@ -14,10 +14,10 @@ const WriteAndUpdate = ({ title }) => {
     };
     const submit = async () => {
         if (title === "Write") {
-            await axios.post("https://blogs-2-back.onrender.com/api/v1/post", Blog).then((res) => alert(res.data.message));
+            await axios.post("https://blogs-back-xa9i.onrender.com/api/v1/post", Blog).then((res) => alert(res.data.message));
             setBlog({ title: "", description: "" });
         } else {
-            await axios.put(`https://blogs-2-back.onrender.com/api/v1/updateBlog/${id}`, Blog).then((res) => alert(res.data.message));
+            await axios.put(`https://blogs-back-xa9i.onrender.com/api/v1/updateBlog/${id}`, Blog).then((res) => alert(res.data.message));
             history(`/BlogsPage/${id}`);
         }
 
@@ -25,7 +25,7 @@ const WriteAndUpdate = ({ title }) => {
     useEffect(() => {
         const fetch = async () => {
             if (title === "Update") {
-                await axios.get(`https://blogs-2-back.onrender.com/api/v1/getBlog/${id}`)
+                await axios.get(`https://blogs-back-xa9i.onrender.com/api/v1/getBlog/${id}`)
                     .then((res) => setBlog(res.data.data));
 
             }
